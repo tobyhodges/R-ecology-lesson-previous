@@ -459,7 +459,7 @@ sessionInfo()
 #>  [9] tibble_3.2.1    ggplot2_3.5.1   tidyverse_2.0.0 knitr_1.47     
 #> 
 #> loaded via a namespace (and not attached):
-#>  [1] bit_4.0.5        gtable_0.3.5     compiler_4.4.3   renv_1.1.2      
+#>  [1] bit_4.0.5        gtable_0.3.5     compiler_4.4.3   renv_1.1.4      
 #>  [5] highr_0.11       tidyselect_1.2.1 blob_1.2.4       scales_1.3.0    
 #>  [9] fastmap_1.2.0    yaml_2.3.8       R6_2.5.1         generics_0.1.3  
 #> [13] munsell_0.5.1    DBI_1.2.3        pillar_1.9.0     tzdb_0.4.0      
