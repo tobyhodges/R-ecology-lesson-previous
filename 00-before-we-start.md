@@ -433,13 +433,13 @@ sessionInfo()
 ```
 
 ``` output
-#> R version 4.4.3 (2025-02-28)
+#> R version 4.5.0 (2025-04-11)
 #> Platform: x86_64-pc-linux-gnu
 #> Running under: Ubuntu 22.04.5 LTS
 #> 
 #> Matrix products: default
 #> BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 
-#> LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
+#> LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0  LAPACK version 3.10.0
 #> 
 #> locale:
 #>  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
@@ -459,15 +459,15 @@ sessionInfo()
 #>  [9] tibble_3.2.1    ggplot2_3.5.1   tidyverse_2.0.0 knitr_1.50     
 #> 
 #> loaded via a namespace (and not attached):
-#>  [1] bit_4.6.0        gtable_0.3.6     compiler_4.4.3   renv_1.1.4      
+#>  [1] bit_4.6.0        gtable_0.3.6     compiler_4.5.0   renv_1.1.4      
 #>  [5] tidyselect_1.2.1 blob_1.2.4       scales_1.3.0     fastmap_1.2.0   
 #>  [9] yaml_2.3.10      R6_2.6.1         generics_0.1.3   munsell_0.5.1   
 #> [13] DBI_1.2.3        pillar_1.10.1    tzdb_0.5.0       rlang_1.1.5     
 #> [17] cachem_1.1.0     stringi_1.8.7    xfun_0.51        bit64_4.6.0-1   
 #> [21] memoise_2.0.1    timechange_0.3.0 cli_3.6.4        withr_3.0.2     
-#> [25] magrittr_2.0.3   grid_4.4.3       hms_1.1.3        lifecycle_1.0.4 
+#> [25] magrittr_2.0.3   grid_4.5.0       hms_1.1.3        lifecycle_1.0.4 
 #> [29] vctrs_0.6.5      evaluate_1.0.3   glue_1.8.0       colorspace_2.1-1
-#> [33] tools_4.4.3      pkgconfig_2.0.3
+#> [33] tools_4.5.0      pkgconfig_2.0.3
 ```
 
 
