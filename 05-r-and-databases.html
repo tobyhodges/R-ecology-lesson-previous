@@ -321,7 +321,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>SQL databases and R</h1>
-        <p>Last updated on 2025-04-22 |
+        <p>Last updated on 2025-05-06 |
 
         <a href="https://github.com/tobyhodges/R-ecology-lesson-previous/edit/main/episodes/05-r-and-databases.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -472,7 +472,7 @@ connected to:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code><span><span class="co">#&gt; src:  sqlite 3.47.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
+<pre class="output" tabindex="0"><code><span><span class="co">#&gt; src:  sqlite 3.49.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
 <span><span class="co">#&gt; tbls: plots, species, surveys</span></span></code></pre>
 </div>
 <p>Just like a spreadsheet with multiple worksheets, a SQLite database
@@ -530,7 +530,7 @@ function can be used to check the first 10 rows of the table:</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="co">#&gt; # Source:   SQL [?? x 9]</span></span>
-<span><span class="co">#&gt; # Database: sqlite 3.47.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
+<span><span class="co">#&gt; # Database: sqlite 3.49.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
 <span><span class="co">#&gt;    record_id month   day  year plot_id species_id sex   hindfoot_length weight</span></span>
 <span><span class="co">#&gt;        &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;           &lt;int&gt;  &lt;int&gt;</span></span>
 <span><span class="co">#&gt;  1         1     7    16  1977       2 NL         M                  32     NA</span></span>
@@ -640,7 +640,7 @@ sex, and weight columns.</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="co">#&gt; # Source:   SQL [?? x 3]</span></span>
-<span><span class="co">#&gt; # Database: sqlite 3.47.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
+<span><span class="co">#&gt; # Database: sqlite 3.49.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
 <span><span class="co">#&gt;    species_id sex   weight</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;  &lt;int&gt;</span></span>
 <span><span class="co">#&gt;  1 PF         M          4</span></span>
@@ -653,7 +653,13 @@ sex, and weight columns.</p>
 <span><span class="co">#&gt;  8 RM         M          4</span></span>
 <span><span class="co">#&gt;  9 RM         M          4</span></span>
 <span><span class="co">#&gt; 10 RM         M          4</span></span>
-<span><span class="co">#&gt; # ℹ more rows</span></span></code></pre>
+<span><span class="co">#&gt; 11 RM         M          4</span></span>
+<span><span class="co">#&gt; 12 RM         F          4</span></span>
+<span><span class="co">#&gt; 13 RM         M          4</span></span>
+<span><span class="co">#&gt; 14 RM         M          4</span></span>
+<span><span class="co">#&gt; 15 RM         M          4</span></span>
+<span><span class="co">#&gt; 16 PF         M          4</span></span>
+<span><span class="co">#&gt; 17 PP         M          4</span></span></code></pre>
 </div>
 <p>Executing this command will return a table with 10 rows and the
 requested <code>species_id</code>, <code>sex</code> and
@@ -694,7 +700,7 @@ the <code>%&gt;%</code> pipe.</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="co">#&gt; # Source:   SQL [?? x 2]</span></span>
-<span><span class="co">#&gt; # Database: sqlite 3.47.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
+<span><span class="co">#&gt; # Database: sqlite 3.49.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
 <span><span class="co">#&gt;    species_id weight</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;       &lt;int&gt;</span></span>
 <span><span class="co">#&gt;  1 PF              4</span></span>
@@ -707,7 +713,13 @@ the <code>%&gt;%</code> pipe.</p>
 <span><span class="co">#&gt;  8 RM              4</span></span>
 <span><span class="co">#&gt;  9 RM              4</span></span>
 <span><span class="co">#&gt; 10 RM              4</span></span>
-<span><span class="co">#&gt; # ℹ more rows</span></span></code></pre>
+<span><span class="co">#&gt; 11 RM              4</span></span>
+<span><span class="co">#&gt; 12 RM              4</span></span>
+<span><span class="co">#&gt; 13 RM              4</span></span>
+<span><span class="co">#&gt; 14 RM              4</span></span>
+<span><span class="co">#&gt; 15 RM              4</span></span>
+<span><span class="co">#&gt; 16 PF              4</span></span>
+<span><span class="co">#&gt; 17 PP              4</span></span></code></pre>
 </div>
 <p>Just like the first <code>select(species_id, sex, weight)</code>
 call, the <code>select(-sex)</code> command is not executed by R. It is
@@ -765,7 +777,7 @@ it:</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="co">#&gt; # Source:   table&lt;`plots`&gt; [?? x 2]</span></span>
-<span><span class="co">#&gt; # Database: sqlite 3.47.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
+<span><span class="co">#&gt; # Database: sqlite 3.49.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
 <span><span class="co">#&gt;    plot_id plot_type</span></span>
 <span><span class="co">#&gt;      &lt;int&gt; &lt;chr&gt;</span></span>
 <span><span class="co">#&gt;  1       1 Spectab exclosure</span></span>
@@ -792,7 +804,7 @@ it:</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="co">#&gt; # Source:   table&lt;`surveys`&gt; [?? x 9]</span></span>
-<span><span class="co">#&gt; # Database: sqlite 3.47.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
+<span><span class="co">#&gt; # Database: sqlite 3.49.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data_raw/portal_mammals.sqlite]</span></span>
 <span><span class="co">#&gt;    record_id month   day  year plot_id species_id sex   hindfoot_length weight</span></span>
 <span><span class="co">#&gt;        &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;           &lt;int&gt;  &lt;int&gt;</span></span>
 <span><span class="co">#&gt;  1         1     7    16  1977       2 NL         M                  32     NA</span></span>
@@ -1101,7 +1113,7 @@ tables:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code><span><span class="co">#&gt; src:  sqlite 3.47.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data/portal-database-output.sqlite]</span></span>
+<pre class="output" tabindex="0"><code><span><span class="co">#&gt; src:  sqlite 3.49.1 [/home/runner/work/R-ecology-lesson-previous/R-ecology-lesson-previous/site/built/data/portal-database-output.sqlite]</span></span>
 <span><span class="co">#&gt; tbls:</span></span></code></pre>
 </div>
 <p>To add tables, we copy the existing data.frames into the database one
@@ -1217,7 +1229,7 @@ and <code>copy_to()</code> to add data to it.</li>
   "url": "https://datacarpentry.github.io/R-ecology-lesson/05-r-and-databases.html",
   "identifier": "https://datacarpentry.github.io/R-ecology-lesson/05-r-and-databases.html",
   "dateCreated": "2015-04-02",
-  "dateModified": "2025-04-22",
+  "dateModified": "2025-05-06",
   "datePublished": "2025-05-06"
 }
 
